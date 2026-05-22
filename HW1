@@ -1,0 +1,34 @@
+"""
+Katrina Chen 
+kc2339
+CEE3102
+3/25/26
+"""
+
+
+#Question 1
+
+digits = "123456789" 
+even_digits = digits[1::2]
+print (even_digits)
+
+backwards = digits[::-1]
+print(backwards)
+
+flip_slice = digits[-2:1:-1]
+print(flip_slice)
+
+#Question 2
+
+digits = "123456789" 
+x = ""
+for d in digits[::2]:
+    x += d
+print(str(x))
+
+#Question 3
+
+dict = {"first_name": "Katrina", "last_name": "Chen", "netID": "kc2339"}
+
+for key in dict: 
+    print (dict[key])
