@@ -1,0 +1,23 @@
+Alif’s CS 101
+
+cd- change/switch into directory/folder (repos count)
+Creating new file- touch [name].[type of file]
+Read files -  cat [name].[type of file]
+To save - control + X
+List- lists all files in that directory
+List all -  ls -a (shows all the files, even the hidden ones
+Staging (concept)- rounding up the files to store somewhere
+- [git add ]to do this
+
+Git commit -m “[text]”- to add the files to the repo
+Git log - shows the previous commits
+Cd .. -  go back to previous level
+
+Why Im better than some seniors
+
+git init- to initialize repos
+
+ The holy trinity 
+- git add [file/folder name]
+- git commit -m “text”
+- git push 
