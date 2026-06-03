@@ -129,10 +129,63 @@ plt.show()
 """
 
 scores = np.random.normal(loc = 80, #center/mean of distribution
-                          scale = 10 #sd of distribution
+                          scale = 10, #sd of distribution
                           size = 100 #number of values
                           )
 
-plt.hist(scores)
+scores = np.clip(scores, 0, 100) #setting min and max bounds
+
+plt.hist(scores, bins= 10,
+                 color = "lightgreen",
+                 edgecolor = "black")
+
+plt.title('Exam Scores')
+plt.xlabel("Score")
+plt.ylabel("# of Students")
+
+plt.show()
+
+#Subplots
+
+#Figure = the entire canvas for which we add plots to
+#Ax = a single plot (subplot)
+
+figure, axes = (plt.subplot(2, 2)) #axes = technically a numpy array
+
+axes[0,0].plot(x, x*2, color = "red")
+axes[0,0].set_title("x*2")
+
+axes[0,1].bar(x, x**2, color = "blue")
+axes[0,1].set_title("x**2")
+
+axes[1,0].plot(x, x**3, color = "green")
+axes[1,0].set_title("x**3")
+
+axes[1,1].plot(x, x**4, color = "purple")
+axes[1,1].set_title("x**4")
+
+plt.tight_layout() #makes all subplots fit, no overlap
+plt.show()
+
+#matplotlib + pandas ->
+
+import pandas as pd
+
+#df assigns file to a dataframe
+df = pd.read_csv("Original150pokemons.csv")
+
+
+
+print(df["Type1"]) #only prints a single column/series under Type1
+print(df["Type1"].value_counts()) #Counts how many are under each Type
+
+type_count = df["Type1"].value_counts(ascending = True)
+
+plt.barh(type_count.index, type_count.values, color = "03dffc",edgecolor = "Black") # (type, # in each type)
+
+plt.title("# of Pokemon by Primary Type")
+plt.xlabel("Count")
+plt.ylabel("Type")
+plt.tight_layout()
 
 plt.show()
