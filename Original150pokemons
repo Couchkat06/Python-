@@ -1,5 +1,8 @@
 No,Name,Type1,Type2,Height,Weight,Legendary
 1,Bulbasaur,Grass,Poison,0.7,6.9,0
+1,Bulbasaur,Grass,Poison,0.7,6.9,0
+1,Bulbasaur,Grass,Poison,0.7,6.9,0
+1,Bulbasaur,Grass,Poison,0.7,6.9,0
 2,Ivysaur,Grass,Poison,1,13,0
 3,Venusaur,Grass,Poison,2,100,0
 4,Charmander,Fire,,0.6,8.5,0
@@ -50,6 +53,8 @@ No,Name,Type1,Type2,Height,Weight,Legendary
 49,Venomoth,Bug,Poison,1.5,12.5,0
 50,Diglett,Ground,,0.2,0.8,0
 51,Dugtrio,Ground,,0.7,33.3,0
+52,Meowth,Normal,,0.4,4.2,0
+52,Meowth,Normal,,0.4,4.2,0
 52,Meowth,Normal,,0.4,4.2,0
 53,Persian,Normal,,1,32,0
 54,Psyduck,Water,,0.8,19.6,0
