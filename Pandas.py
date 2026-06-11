@@ -53,3 +53,38 @@ print(df)
 #Importing CSV (Comma Separated Values) and JSON (Javascript Object Notation)
 
 df = pd.read_csv("Original150pokemons")
+
+print(df.to_string()) #prints all the data in the df
+
+#Selection by Column 
+print(df["Name"].to_string()) #Passes in a column name to select that column
+print(df["Height"].to_string())
+print(df["Weight"].to_string())
+print(df[["Name", "Height", "Weight"]].to_string())
+
+#Selection by Rows
+
+df = pd.read_csv("Original150pokemons", index_col = "Name")
+
+print(df.loc["Charizard": "Blastoise", ["Height", "Weight"]]) 
+
+print(df.iloc[0:11:2, 0:3]) #gives every second row according to the index number, gives first 3 columns
+#iloc = index locate
+
+pokemon = input("Enter a Pokemon name: ")
+
+try: 
+    print(df.loc[pokemon])
+except KeyError: 
+    print(f"{pokemon} not found")
+
+#Filtering = Keeping the rows that match a condition
+
+tall_pokemon = df[df["Height"] >= 2]
+heavy_pokemon = df[df["Weight"] > 100]
+legendary_pokemon = df[df['Legendary'] == True]
+water_pokemon = df[df["Type1"] == "Water"]
+
+print(tall_pokemon)
+print(heavy_pokemon)
+
